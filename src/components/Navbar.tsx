@@ -6,12 +6,14 @@ import {
   AiOutlineSearch,
   AiOutlineHeart,
   AiOutlineShoppingCart,
+  AiOutlineMenu,
 } from "react-icons/ai";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className={styles.container}>
-      <div className={styles.nav_left}>
+    <header className={styles.navbar}>
+      <div className={styles.navbar_left}>
         <Image
           src="/images/logo.png"
           alt=""
@@ -20,19 +22,34 @@ const Navbar = () => {
           layout="fixed"
         />
       </div>
-      <nav className={styles.nav_right}>
+      <nav className={styles.navbar_right}>
         <div className={styles.menu_left}>
           <AiOutlineSearch />
         </div>
         <ul className={styles.menu_center}>
-          <li>home</li>
-          <li>collection</li>
-          <li>furniture</li>
-          <li>pages</li>
-          <li>blog</li>
-          <li>services</li>
+          <li>
+            <Link href="/">home</Link>
+          </li>
+          <li>
+            <Link href="/">collection</Link>
+          </li>
+          <li>
+            <Link href="/">furniture</Link>
+          </li>
+          <li>
+            <Link href="/">pages</Link>
+          </li>
+          <li>
+            <Link href="/">blog</Link>
+          </li>
+          <li>
+            <Link href="/">services</Link>
+          </li>
         </ul>
         <div className={styles.menu_right}>
+          <div className={styles.mobile_search}>
+            <AiOutlineSearch />
+          </div>
           <div id="favorite">
             <AiOutlineHeart />
           </div>
@@ -40,8 +57,11 @@ const Navbar = () => {
             <AiOutlineShoppingCart />
           </div>
         </div>
+        <div className={styles.mobile_btn}>
+          <AiOutlineMenu size={25} />
+        </div>
       </nav>
-    </div>
+    </header>
   );
 };
 
