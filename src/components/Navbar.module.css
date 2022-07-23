@@ -60,12 +60,10 @@
   flex: 1;
 }
 
-.mobile_btn{
+.mobile_btn,.menu_CloseBtn,.mobile_search{
   display: none;
 }
-.mobile_search{
-  display: none;
-}
+
 @media screen and (max-width: 1400px){
   .mobile_btn{
     display: block;
@@ -74,13 +72,14 @@
     top: 1rem;
     cursor: pointer;
     z-index: 10;
+    margin-top: 15px;
   }
   .navbar_right{
     display:flex;
     flex-direction: column;
     justify-content: center;
     position: fixed;
-    /* left: -100%; */
+    left: -100%;
     right: 0;
     top: 0;
     width: 100%;
@@ -116,6 +115,13 @@ flex: 3;
   }
   .mobile_search{
     display: block;
+  }
+  .menu_CloseBtn{
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    cursor: pointer;
   }
 }
   

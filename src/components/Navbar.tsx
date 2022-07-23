@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import logo from "./images/logo.png";
 import Image from "next/image";
@@ -7,10 +7,12 @@ import {
   AiOutlineHeart,
   AiOutlineShoppingCart,
   AiOutlineMenu,
+  AiOutlineClose,
 } from "react-icons/ai";
 import Link from "next/link";
 
 const Navbar = () => {
+  const [nav, setNav] = useState(false);
   return (
     <header className={styles.navbar}>
       <div className={styles.navbar_left}>
@@ -22,7 +24,16 @@ const Navbar = () => {
           layout="fixed"
         />
       </div>
-      <nav className={styles.navbar_right}>
+      <nav
+        className={
+          nav
+            ? [styles.navbar_right, styles.active].join(" ")
+            : styles.navbar_right
+        }
+      >
+        <div className={styles.menu_CloseBtn} onClick={() => setNav(!nav)}>
+          <AiOutlineClose size={25} />
+        </div>
         <div className={styles.menu_left}>
           <AiOutlineSearch />
         </div>
@@ -48,7 +59,7 @@ const Navbar = () => {
         </ul>
         <div className={styles.menu_right}>
           <div className={styles.mobile_search}>
-            <AiOutlineSearch />
+            <AiOutlineSearch size={25} />
           </div>
           <div id="favorite">
             <AiOutlineHeart />
@@ -57,10 +68,10 @@ const Navbar = () => {
             <AiOutlineShoppingCart />
           </div>
         </div>
-        <div className={styles.mobile_btn}>
-          <AiOutlineMenu size={25} />
-        </div>
       </nav>
+      <div className={styles.mobile_btn} onClick={() => setNav(!nav)}>
+        {!nav && <AiOutlineMenu size={25} />}
+      </div>
     </header>
   );
 };
