@@ -6,6 +6,7 @@ import useEmblaCarousel, {
   UseEmblaCarouselType,
 } from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+
 const Hero = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()]);
   const [scrollSnaps, setScrollSnaps] = useState([]);
@@ -45,14 +46,12 @@ const Hero = () => {
             </div>
             <div className={styles.embla__slide}>
               <p>
-                {" "}
                 hello. <span>we are plant store</span> a store for people who
                 want to buy less, <span>but better.2</span>
               </p>
             </div>
             <div className={styles.embla__slide}>
               <p>
-                {" "}
                 hello. <span>we are plant store</span> a store for people who
                 want to buy less, <span>but better.3</span>
               </p>
@@ -62,6 +61,7 @@ const Hero = () => {
         <div className={styles.embla__dots}>
           {scrollSnaps.map((_, index) => (
             <button
+              key={index}
               className={[
                 styles.embla__dot,
                 index === selectedIndex && styles.is_selected,
