@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Products.module.css";
+import { AiOutlineHeart } from "react-icons/ai";
 
 const Products = () => {
   return (
@@ -24,12 +25,50 @@ const Products = () => {
             <a href="/">sale</a>
           </div>
         </div>
-        <div className="container">
-          <div>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
+        <div>
+          <div className={styles.grid_container}>
+            <div>
+              <img src="images/a.jpg" alt="" />
+              <div>
+                <p>lorem fa ege fww</p>
+                <p className={styles.des}>Beautiful planter</p>
+              </div>
+              <p className={styles.price}>256$</p>
+              <AiOutlineHeart fontSize={25} color={"grey"} />
+            </div>
+            <div>
+              <img src="images/b.jpg" alt="" />
+              <AiOutlineHeart fontSize={25} color={"grey"} />
+            </div>
+            <div>
+              <img src="images/c.jpg" alt="" />
+              <AiOutlineHeart fontSize={25} color={"grey"} />
+            </div>
+            <div>
+              <img src="images/d.jpg" alt="" />
+              <AiOutlineHeart fontSize={25} color={"grey"} />
+            </div>
+            <div>
+              <img src="images/e.jpg" alt="" />
+              <AiOutlineHeart fontSize={25} color={"grey"} />
+              <div>
+                <p>lorem fa ege fww</p>
+                <p className={styles.des}>Beautiful planter</p>
+              </div>
+              <p className={styles.price}>256$</p>
+            </div>
+            <div>
+              <img src="images/f.jpg" alt="" />
+              <AiOutlineHeart fontSize={25} color={"grey"} />
+            </div>
+            <div>
+              <img src="images/g.jpg" alt="" />
+              <AiOutlineHeart fontSize={25} color={"grey"} />
+            </div>
+            <div>
+              <img src="images/h.jpg" alt="" />
+              <AiOutlineHeart fontSize={25} color={"grey"} />
+            </div>
           </div>
         </div>
       </div>
