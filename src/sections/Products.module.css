@@ -66,8 +66,6 @@ margin: 50px auto;
 
   .grid_container{
     display: grid;
-height:calc( 100vh - 200px);
-width: 100vw;
     grid-template-areas: 
     'a a b c d'
     'a a g g h'

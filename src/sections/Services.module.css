@@ -1,0 +1,45 @@
+.container{
+  height: 300px;
+  width: 100vw;
+  background-image: url('/images/hero.jpg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+} 
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 0;
+}
+
+.wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+}
+
+.wrapper p{
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.service{
+  display: flex;
+  align-items: center;
+}
+
+.service_title{
+  margin-left: 10px;
+  max-width: 200px;
+}
